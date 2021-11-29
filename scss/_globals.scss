@@ -1,0 +1,34 @@
+html {
+	font-size: 100%;
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+body {
+	background: {
+		image: url(/images/bg-intro-desktop.png);
+		color: $red;
+		size: cover;
+		position: fixed;
+		repeat: no-repeat;
+	}
+
+	font-family: 'Poppins', sans-serif;
+	min-height: 100vh;
+	text-align: center;
+
+	@include flex-center;
+	flex-direction: column;
+}
+
+a {
+	text-decoration: none;
+	color: $red;
+}

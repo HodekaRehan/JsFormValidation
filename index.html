@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://kit.fontawesome.com/3aa05c38fc.js"
+			crossorigin="anonymous"
+		></script>
+		<link rel="stylesheet" href="./css/style.css" />
+
+		<title>Frontend Mentor | Intro component with sign up form</title>
+	</head>
+	<body>
+		<main>
+			<section class="section first">
+				<h2>Learn to code by watching others</h2>
+				<p class="para">
+					See how experienced developers solve problems in real-time.
+					Watching scripted tutorials is great, but understanding how
+					developers think is invaluable.
+				</p>
+			</section>
+			<section class="section second">
+				<p class="para2">
+					<strong>Try it free 7 days</strong> then $20/mo. thereafter
+				</p>
+				<div class="form-container">
+					<form id="form" action="">
+						<div class="form-control">
+							<label for="userName"></label>
+							<input
+								type="text"
+								id="userName"
+								name="userName"
+								placeholder="Username"
+							/>
+							<small></small>
+							<i class="fas fa-check-circle"></i>
+							<i class="fas fa-exclamation-circle"></i>
+						</div>
+						<div class="form-control">
+							<label for="userEmail"></label>
+							<input
+								type="email"
+								id="userEmail"
+								name="userEmail"
+								placeholder="Email Address"
+							/>
+							<small></small>
+							<i class="fas fa-check-circle"></i>
+							<i class="fas fa-exclamation-circle"></i>
+						</div>
+						<div class="form-control">
+							<label for="userPassword"></label>
+							<input
+								type="password"
+								id="userPassword"
+								name="userPassword"
+								placeholder="Password"
+							/>
+							<small></small>
+							<i class="fas fa-check-circle"></i>
+							<i class="fas fa-exclamation-circle"></i>
+						</div>
+						<div class="form-control">
+							<label for="confirmPassword"></label>
+							<input
+								type="password"
+								id="confirmPassword"
+								name="confirmPassword"
+								placeholder="Confirm Password"
+							/>
+							<small></small>
+							<i class="fas fa-check-circle"></i>
+							<i class="fas fa-exclamation-circle"></i>
+						</div>
+						<div class="form-control">
+							<input
+								type="submit"
+								value="Claim your free trial"
+							/>
+						</div>
+					</form>
+					<p class="para3">
+						By clicking the button, you are agreeing to our
+						<a href="#">Terms and Services</a>
+					</p>
+				</div>
+			</section>
+		</main>
+
+		<footer>
+			<p class="attribution">
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io?ref=challenge"
+					target="_blank"
+					>Frontend Mentor</a
+				>. Coded by <a href="#">Rehan Hodekar</a>.
+			</p>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
+</html>

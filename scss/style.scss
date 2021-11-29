@@ -1,0 +1,194 @@
+@import 'variables';
+@import 'mixins';
+@import 'globals';
+
+//main
+main {
+	max-width: 33.75rem;
+	@include flex-center;
+	flex-direction: column;
+
+	@include for-size(desktop) {
+		flex-direction: row;
+		max-width: 60.375rem;
+
+		.section {
+			width: 50%;
+		}
+	}
+}
+//first section
+.first {
+	@include for-size(desktop) {
+		text-align: left;
+	}
+
+	h2 {
+		margin-top: 6.25rem;
+		color: $white;
+		font-size: 2rem;
+
+		@include for-size(desktop) {
+			font-size: 2.5rem;
+			margin-top: 0;
+		}
+	}
+
+	.para {
+		margin: 2.25rem 1.875rem 4.375rem;
+		color: $light-grey;
+		line-height: 1.8;
+		font-weight: map-get($font-weights, 'medium');
+
+		@include for-size(desktop) {
+			margin: 2.5rem 2.5rem 0 0;
+		}
+	}
+}
+
+//second section
+.second {
+	margin: 0 1.5rem;
+	.para2 {
+		background-color: $blue;
+		border-radius: 0.625rem;
+		color: $grayish-blue;
+		font-weight: map-get($font-weights, 'medium');
+		padding: 1.5rem 4rem;
+		box-shadow: 0 8px $shadow;
+
+		strong {
+			color: $white;
+		}
+
+		@include for-size(desktop) {
+			padding: 1.5rem 2.5rem;
+		}
+	}
+}
+
+//form container
+.form-container {
+	background-color: $white;
+	border-radius: 0.625rem;
+	margin: 1.5rem 0 0.5rem 0;
+	padding: 1.5rem;
+	box-shadow: 0 8px $shadow;
+
+	.para3 {
+		font-size: 0.75rem;
+		color: $grey;
+		font-weight: map-get($font-weights, 'semi-bold');
+	}
+}
+
+//form-control
+.form-control {
+	position: relative;
+	margin-bottom: 1.125rem;
+
+	input {
+		width: 100%;
+		padding: 1.25rem;
+
+		border: {
+			radius: 0.3125rem;
+			style: solid;
+			width: 2px;
+			color: $grey;
+		}
+
+		&:focus {
+			outline: none;
+		}
+	}
+
+	input[type='submit'] {
+		background-color: $green;
+		color: $white;
+		letter-spacing: 1px;
+		font-size: 1.125rem;
+		text-transform: uppercase;
+		font-weight: map-get($font-weights, 'semi-bold');
+		cursor: pointer;
+		border: none;
+		box-shadow: 0 5px $dark-green;
+
+		&:hover {
+			background-color: $light-green;
+		}
+	}
+
+	small {
+		text-align: right;
+		font: {
+			weight: map-get($font-weights, 'medium');
+			style: italic;
+		}
+		color: $red;
+		display: none;
+	}
+
+	i.fa-check-circle,
+	i.fa-exclamation-circle {
+		position: absolute;
+		top: 1.2rem;
+		right: 1.25rem;
+		font-size: 1.4rem;
+		display: none;
+	}
+
+	.eye {
+		position: absolute;
+		top: 1.3rem;
+		right: 3.5rem;
+		font-size: 1.2rem;
+		color: $placeholder;
+		cursor: pointer;
+	}
+
+	//success
+	&.success i.fa-check-circle {
+		display: block;
+		color: $green;
+	}
+
+	&.success input {
+		border-color: $green;
+	}
+
+	//error
+	&.error i.fa-exclamation-circle {
+		display: block;
+		color: $red;
+	}
+
+	&.error input {
+		border-color: $red;
+	}
+
+	&.error small {
+		display: block;
+	}
+}
+
+::placeholder {
+	color: $placeholder;
+	font-weight: map-get($font-weights, 'semi-bold');
+}
+
+//footer
+.attribution {
+	font-size: 11px;
+	text-align: center;
+	margin-bottom: 5rem;
+	color: $white;
+
+	@include for-size(desktop) {
+		margin-bottom: 0;
+	}
+
+	a {
+		color: hsl(228, 45%, 44%);
+	}
+}
